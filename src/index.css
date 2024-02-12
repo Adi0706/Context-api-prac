@@ -16,3 +16,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.btn-card{
+  border:solid ; 
+  border-color:black ;
+  padding:10px;
+  margin:20px;
+  border-radius:20px;
+}
+.btn-card:hover{
+  background:black;
+  color:white;
+}
