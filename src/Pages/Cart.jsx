@@ -5,6 +5,7 @@ function Cart() {
   return (
   <>
   <Navbar/>
+  
   </>
   )
 }
