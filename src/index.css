@@ -27,3 +27,14 @@ code {
   background:black;
   color:white;
 }
+.btn-quantity{
+  /* border:solid 0.5px;
+  border-color:black ; */
+  padding:7px;
+  background:silver;
+  color:white;
+}
+.btn-quantity:hover{
+  background:white;
+  color:black;
+}
