@@ -8,18 +8,21 @@ const SneakerData = [
         cardName:"Product-1",
         cardPrice:"$200",
         cardImage:product1
+        
     },
     {
         id:"2",
         cardName:"Product-2",
         cardPrice:"$300",
         cardImage:product2
+        
     },
     {
         id:"3",
         cardName:"Product-3",
         cardPrice:"$400",
         cardImage:product3
+        
     }
     
 ]
