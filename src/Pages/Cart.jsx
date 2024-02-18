@@ -4,7 +4,7 @@ import { useMyCartContext } from '../Context/CartContext';
 import { MdDelete } from "react-icons/md";
 
 function Cart() {
-  const { cart } = useMyCartContext();
+  const { cart,setCart } = useMyCartContext();
 
   // Check if cart is not an array
   if (!Array.isArray(cart)) {
@@ -12,6 +12,11 @@ function Cart() {
     return null; // Return early if cart is not an array
   }
 
+
+  const handleDelete=(productId)=>{
+    const updatedCart = cart.filter((item)=>item.id !== productId)
+    setCart(updatedCart)
+  }
   return (
     <>
       <Navbar />
@@ -31,7 +36,8 @@ function Cart() {
                 <div className=' flex flex-row items-center w-auto h-auto justify-center ml-36'>
                 <p className="text-lg font-bold p-4">{product.cardName}</p>
                 <p className="text-xl p-4">{product.cardPrice}</p>
-                <MdDelete className='items-center'/>
+                <MdDelete className='items-center cursor-pointer' onClick={()=>handleDelete(product.id)}/>
+
                 <div className='border border-solid border-black flex flex-row ml-7'><button className='btn-quantity'>-</button><p className='mt-2'>number</p><button className='btn-quantity'>+</button></div>
                 </div>
                
